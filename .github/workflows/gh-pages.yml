@@ -38,13 +38,7 @@
 
         - name: Build
           run: hugo --minify
-
-        - name: Deploy
-          uses: peaceiris/actions-gh-pages@v3
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./public
-            
+          
         - name : Black Duck Synopsys Detect
           run: |
             bash <(curl -s -L https://detect.synopsys.com/detect8.sh) \
@@ -59,3 +53,9 @@
             --detect.project.tags=TYPE_web_service,CI_github \
             --detect.project.version.distribution=SAAS \
             --detect.excluded.detector.types=RUBYGEMS
+
+        - name: Deploy
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./public
