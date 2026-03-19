@@ -27,7 +27,7 @@ SPDX Identifier: `AGPL-3.0-only` 또는 `AGPL-3.0-or-later`
 >     - 바이너리 사용자가 공개된 소스 코드로 동일한 바이너리를 만들 수 있는 <span class="-text-warning">빌드 환경</span>을 제공합니다.  
 >   - **설치 정보 제공 의무 : 바이너리를 User Product와 배포한다면 설치 정보(Installation Information)를 제공합니다.**  
 > - <span class="-text-warning">**원격 네트워크 상호 작용**</span>
->   - 원격 사용자가 수정된 버전의 소스 코드를 다운 받을 수 있도록 네트워크 서버를 제공해야 합니다.  
+>   - 수정한 버전을 네트워크를 통해 원격의 사용자와 상호 작용하게 사용하는 경우, 원격 사용자가 수정된 버전의 소스 코드를 제공해야 합니다.  
 
 </div>
 {{% /alert %}}
