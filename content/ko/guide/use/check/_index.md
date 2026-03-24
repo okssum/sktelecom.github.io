@@ -54,6 +54,11 @@ Trivy는 취약점 스캔과 함께 라이선스 정보를 확인할 수 있는 
 trivy fs --scanners license .
 ```
 
+> **주의**: Trivy는 2025년 릴리즈 태그 변조를 통한 공급망 공격 피해를 입은 사례가 있습니다.
+> CLI 설치 시 공식 릴리즈 채널을 이용하고, GitHub Actions에서는 가변 태그(`@latest`, `@master` 등) 대신
+> `@0.35.0` 등 검증된 고정 버전을 사용하십시오.
+> 자세한 내용은 [SBOM 생성 가이드](/guide/supply-chain/for-suppliers/creation-guide/)를 참고하세요.
+
 자동화 도구에 대한 상세한 사용법은 [자동화](/guide/use/automation/) 섹션을 참고하시기 바랍니다.
 
 ## 라이선스 정보 우선순위

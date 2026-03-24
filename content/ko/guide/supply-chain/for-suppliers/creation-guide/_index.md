@@ -47,6 +47,33 @@ Docker 이미지, 파일시스템, 바이너리 파일을 분석하여 OS 패키
 - 공식 문서: [https://aquasecurity.github.io/trivy/](https://aquasecurity.github.io/trivy/)
 - GitHub: [https://github.com/aquasecurity/trivy](https://github.com/aquasecurity/trivy)
 
+> **⚠️ 보안 경고 — Trivy 공급망 공격 사례 (2025년)**
+>
+> 2025년, 공격자가 `aquasecurity/trivy`의 기존 릴리즈 태그를 재지정하여 악성코드를 삽입하는
+> 공급망 공격이 발생하였습니다. **Docker 이미지 0.69.4, 0.69.5, 0.69.6은 오염된 것으로
+> 확인되었으므로 사용을 즉시 중단하십시오.**
+>
+> Trivy를 안전하게 사용하려면 다음 원칙을 따르십시오.
+>
+> - **GitHub Actions**: 가변 태그(`@master`, `@latest`, `@v1` 등) 대신 고정된 Commit SHA 또는 검증된 버전 태그를 사용합니다.
+>
+>   ```yaml
+>   # 권장: 검증된 버전 고정
+>   - uses: aquasecurity/trivy-action@0.35.0
+>   # 더 안전: Commit SHA 고정
+>   - uses: aquasecurity/trivy-action@<commit-sha>
+>   ```
+>
+> - **Docker 이미지**: 특정 버전 태그를 명시하거나 이미지 다이제스트(`@sha256:...`)로 고정합니다.
+>
+>   ```bash
+>   docker run aquasecurity/trivy:<검증된-버전> image <대상-이미지>
+>   ```
+>
+> - **공식 채널**: [GitHub Security Advisory](https://github.com/aquasecurity/trivy-action/security/advisories)를 통해 최신 보안 권고사항을 확인합니다.
+>
+> 이 사례는 오픈소스 도구를 도입할 때 버전을 고정하지 않으면 언제든 공급망 공격에 노출될 수 있음을 보여줍니다. 모든 외부 도구는 버전을 명시하고 무결성을 검증한 뒤 사용하십시오.
+
 ### 언어별 전용 플러그인
 
 빌드 도구 플러그인을 사용하면 더 정확한 의존성 정보를 추출할 수 있습니다.
