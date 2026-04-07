@@ -1,0 +1,15 @@
+{{/* Canonical URL: 중복 URL 문제를 방지하기 위해 각 페이지의 표준 URL을 명시 */}}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{/* hreflang: 한국어/영어 다국어 페이지 간 교차 참조 (Google Search Console SEO) */}}
+{{ if .IsTranslated -}}
+{{ range .AllTranslations -}}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{ end -}}
+{{/* x-default: 언어 매칭 실패 시 기본 언어(ko) 페이지로 유도 */}}
+{{ range .AllTranslations -}}
+{{ if eq .Language.Lang "ko" -}}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{ end -}}
+{{ end -}}
+{{ end -}}
