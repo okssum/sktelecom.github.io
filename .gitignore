@@ -9,3 +9,4 @@
 *.log
 *.tmp
 *.bak
+/static/slides/
