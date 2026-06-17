@@ -1,6 +1,105 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Open Source</title><link>https://sktelecom.github.io/en/</link><description>Recent content on Open Source</description><generator>Hugo</generator><language>en</language><atom:link href="https://sktelecom.github.io/en/index.xml" rel="self" type="application/rss+xml"/><item><title>SK Telecom is the first Telecommunications Operator to adopt OpenChain ISO 5230</title><link>https://sktelecom.github.io/en/blog/2021/09/09/sk-telecom-is-the-first-telecommunications-operator-to-adopt-openchain-iso-5230/</link><pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate><guid>https://sktelecom.github.io/en/blog/2021/09/09/sk-telecom-is-the-first-telecommunications-operator-to-adopt-openchain-iso-5230/</guid><description>&lt;p&gt;SK Telecom, South Korea’s largest wireless carrier, is the first telecommunications operator to adopt OpenChain ISO 5230. This leap forward in governance builds on their long-term mission to lead in technological capabilities in 5G, AI, big data analysis, IoT and quantum cryptography communications as a global ICT leader.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Open Source on SK telecom Open Source</title><link>https://sktelecom.github.io/en/</link><description>Recent content in Open Source on SK telecom Open Source</description><generator>Hugo</generator><language>en</language><atom:link href="https://sktelecom.github.io/en/index.xml" rel="self" type="application/rss+xml"/><item><title>SBOM Concept and Necessity</title><link>https://sktelecom.github.io/en/guide/supply-chain/sbom/what-is-sbom/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sktelecom.github.io/en/guide/supply-chain/sbom/what-is-sbom/</guid><description>&lt;h2 id="definition-of-an-sbom"&gt;Definition of an SBOM&lt;a class="td-heading-self-link" href="#definition-of-an-sbom" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;An SBOM (Software Bill of Materials) is a formalized specification that describes the list of all components, libraries, modules, and so on that make up a piece of software, along with the dependency relationships among them. It applies the manufacturing concept of a BOM (Bill of Materials), used to manage a product&amp;rsquo;s parts list, to software engineering.&lt;/p&gt;
+&lt;pre class="mermaid"&gt;graph TD
+ A[Software Product] --&amp;gt; B[Direct Dependencies]
+ B --&amp;gt; C[Library A v1.2.3]
+ B --&amp;gt; D[Library B v2.0.1]
+ B --&amp;gt; E[Library C v3.1.0]
+ C --&amp;gt; F[Transitive Dependencies]
+ F --&amp;gt; G[Library D v1.0.0]
+ F --&amp;gt; H[Library E v2.5.0]
+ D --&amp;gt; F&lt;/pre&gt;
+&lt;h2 id="key-components-of-an-sbom"&gt;Key Components of an SBOM&lt;a class="td-heading-self-link" href="#key-components-of-an-sbom" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="component-information"&gt;Component Information&lt;a class="td-heading-self-link" href="#component-information" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Includes basic information about each software component.&lt;/p&gt;</description></item><item><title>SBOM Submission Requirements</title><link>https://sktelecom.github.io/en/guide/supply-chain/for-suppliers/requirements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sktelecom.github.io/en/guide/supply-chain/for-suppliers/requirements/</guid><description>&lt;h2 id="1-standard-data-formats"&gt;1. Standard Data Formats&lt;a class="td-heading-self-link" href="#1-standard-data-formats" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;SK Telecom supports both formats that have become established as global standards. Suppliers may choose and submit the format supported by the tool they use.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Format&lt;/th&gt;
+					&lt;th&gt;Version&lt;/th&gt;
+					&lt;th&gt;Recommended Use&lt;/th&gt;
+					&lt;th&gt;File Format&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;CycloneDX&lt;/td&gt;
+					&lt;td&gt;v1.3, v1.4, v1.5, v1.6&lt;/td&gt;
+					&lt;td&gt;Application security, vulnerability management focus&lt;/td&gt;
+					&lt;td&gt;JSON (recommended), XML&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;SPDX&lt;/td&gt;
+					&lt;td&gt;v2.2, v2.3&lt;/td&gt;
+					&lt;td&gt;License compliance focus&lt;/td&gt;
+					&lt;td&gt;JSON, Tag-Value&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: Both formats are recognized equally, but CycloneDX (JSON) format is recommended for internal system interoperability.&lt;/p&gt;</description></item><item><title>Regulatory Trends</title><link>https://sktelecom.github.io/en/guide/supply-chain/overview/regulations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sktelecom.github.io/en/guide/supply-chain/overview/regulations/</guid><description>&lt;h2 id="1-united-states-executive-order-14028-eo-14028"&gt;1. United States: Executive Order 14028 (EO 14028)&lt;a class="td-heading-self-link" href="#1-united-states-executive-order-14028-eo-14028" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In May 2021, the Biden administration issued the &amp;ldquo;Executive Order on Improving the Nation&amp;rsquo;s Cybersecurity (Executive Order 14028).&amp;rdquo; This was a decisive turning point at which supply chain security began to be addressed at the level of national security in the aftermath of the SolarWinds incident.&lt;/p&gt;
+&lt;h3 id="key-provisions"&gt;Key Provisions&lt;a class="td-heading-self-link" href="#key-provisions" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Mandatory SBOM submission: Companies that supply software to the federal government must submit an SBOM.&lt;/li&gt;
+&lt;li&gt;NIST guideline compliance: Companies must comply with the Secure Software Development Framework (SSDF) defined by NIST (the U.S. National Institute of Standards and Technology).&lt;/li&gt;
+&lt;li&gt;Minimum standards: The U.S. administration led standardization by defining the minimum elements of an SBOM (data fields, automation support, etc.).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2-european-union-eu-cyber-resilience-act-cra"&gt;2. European Union (EU): Cyber Resilience Act (CRA)&lt;a class="td-heading-self-link" href="#2-european-union-eu-cyber-resilience-act-cra" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Through the Cyber Resilience Act (CRA), the EU has enacted into law security requirements spanning the entire lifecycle of digital products.&lt;/p&gt;</description></item><item><title>SBOM Standards</title><link>https://sktelecom.github.io/en/guide/supply-chain/sbom/standards/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sktelecom.github.io/en/guide/supply-chain/sbom/standards/</guid><description>&lt;h2 id="major-sbom-standards"&gt;Major SBOM Standards&lt;a class="td-heading-self-link" href="#major-sbom-standards" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;There are currently two major standard formats that split the market between them. Both formats are widely used, but they differ in their origins and primary focus areas.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SPDX: Software Package Data Exchange&lt;/li&gt;
+&lt;li&gt;CycloneDX: A security-focused SBOM standard led by OWASP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="spdx-software-package-data-exchange"&gt;SPDX (Software Package Data Exchange)&lt;a class="td-heading-self-link" href="#spdx-software-package-data-exchange" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;SPDX is an open source project led by the Linux Foundation, developed to represent the license and copyright information of software packages in a standardized way. (ISO/IEC 5962:2021)&lt;/p&gt;</description></item><item><title>SK Telecom Supply Chain Security Policy</title><link>https://sktelecom.github.io/en/guide/supply-chain/overview/policy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sktelecom.github.io/en/guide/supply-chain/overview/policy/</guid><description>&lt;blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;NOTICE.&lt;/p&gt;
+&lt;p&gt;In accordance with internal security and document management policies, this document is a summary that excludes confidential content. Please note that it is written around high-level key points rather than the full content.&lt;/p&gt;
+&lt;hr&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="1-purpose-of-the-policy"&gt;1. Purpose of the Policy&lt;a class="td-heading-self-link" href="#1-purpose-of-the-policy" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The purpose of this policy is to ensure the transparency of all software that SK Telecom adopts, and to identify and eliminate, in advance, the risks of known vulnerabilities and license violations.&lt;/p&gt;</description></item><item><title>Pre-Submission SBOM Validation Checklist</title><link>https://sktelecom.github.io/en/guide/supply-chain/for-suppliers/checklist/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sktelecom.github.io/en/guide/supply-chain/for-suppliers/checklist/</guid><description>&lt;h2 id="essential-checklist-items"&gt;Essential Checklist Items&lt;a class="td-heading-self-link" href="#essential-checklist-items" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;An SBOM that does not pass the checklist below may be automatically rejected by the system.&lt;/p&gt;
+&lt;h3 id="1-file-integrity"&gt;1. File Integrity&lt;a class="td-heading-self-link" href="#1-file-integrity" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Is the file extension &lt;code&gt;.json&lt;/code&gt; or &lt;code&gt;.xml&lt;/code&gt;? (Not an archive file)&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Is the file size at least 1KB, and the content not empty?&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Are there any JSON syntax errors? (Verification with &lt;code&gt;jq&lt;/code&gt; or similar is recommended)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2-required-data-fields"&gt;2. Required Data Fields&lt;a class="td-heading-self-link" href="#2-required-data-fields" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; bomFormat: Is &lt;code&gt;CycloneDX&lt;/code&gt; or &lt;code&gt;SPDX&lt;/code&gt; specified?&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Metadata: Are the name and version of the top-level component (the delivered project) accurate?&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; Components: Does the list of included libraries match the actual ones?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="3-dependency-completeness-check"&gt;3. Dependency Completeness Check&lt;a class="td-heading-self-link" href="#3-dependency-completeness-check" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Missing transitive dependencies are the most common reason for rejection. Be sure to verify the items below.&lt;/p&gt;</description></item><item><title>SBOM Submission Process</title><link>https://sktelecom.github.io/en/guide/supply-chain/for-suppliers/submission/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sktelecom.github.io/en/guide/supply-chain/for-suppliers/submission/</guid><description>&lt;h2 id="1-when-to-submit"&gt;1. When to Submit&lt;a class="td-heading-self-link" href="#1-when-to-submit" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;At initial delivery after concluding a software contract&lt;/li&gt;
+&lt;li&gt;When a major or minor version of the software is updated&lt;/li&gt;
+&lt;li&gt;When a regular submission schedule specified in the contract arrives&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2-how-to-submit"&gt;2. How to Submit&lt;a class="td-heading-self-link" href="#2-how-to-submit" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The SBOM file is submitted to SK Telecom&amp;rsquo;s business unit and security team representatives via email or a designated system.&lt;/p&gt;
+&lt;h3 id="submission-method"&gt;Submission Method&lt;a class="td-heading-self-link" href="#submission-method" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Deliver the SBOM file to the business unit and security team representatives via email or a channel designated by the representative.&lt;/li&gt;
+&lt;li&gt;Email subject: &lt;code&gt;[SBOM Submission] SupplierName_ProjectName_Version&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Attachment: The generated SBOM file (password-protected archive files are not allowed)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Required information in the body:&lt;/p&gt;</description></item><item><title>Introducing BomLens, a Supply Chain Security Tool</title><link>https://sktelecom.github.io/en/blog/2026/06/04/introducing-bomlens-a-supply-chain-security-tool/</link><pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate><guid>https://sktelecom.github.io/en/blog/2026/06/04/introducing-bomlens-a-supply-chain-security-tool/</guid><description>&lt;p&gt;Hello.&lt;/p&gt;
+&lt;p&gt;SK Telecom has released &lt;a href="https://github.com/sktelecom/sbom-tools"&gt;BomLens&lt;/a&gt;, a supply chain security tool it developed in-house, as open source. BomLens analyzes the components of your software and automatically produces a CycloneDX 1.6 SBOM (Software Bill of Materials).&lt;/p&gt;
+&lt;p&gt;As software supply chain security grows in importance, knowing exactly which open source components and versions are included becomes increasingly critical. BomLens automates this process, easing the burden for both the producer and the receiver of software.&lt;/p&gt;</description></item><item><title>onot, the Open Source Notice Generator, Gets a Major Overhaul</title><link>https://sktelecom.github.io/en/blog/2026/06/04/onot-the-open-source-notice-generator-gets-a-major-overhaul/</link><pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate><guid>https://sktelecom.github.io/en/blog/2026/06/04/onot-the-open-source-notice-generator-gets-a-major-overhaul/</guid><description>&lt;p&gt;Hello.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/sktelecom/onot"&gt;onot&lt;/a&gt;, the open source notice generator jointly developed by SK Telecom and Kakao, has been substantially overhauled. onot is a compliance tool that reads an SBOM (Software Bill of Materials) and automatically produces an open source license notice (OSS Notice). This update broadens both the input and output formats, and onot can now be used as a desktop app in addition to the command-line tool.&lt;/p&gt;
+&lt;h2 id="whats-new"&gt;What&amp;rsquo;s New&lt;a class="td-heading-self-link" href="#whats-new" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="it-reads-more-sbom-formats"&gt;It reads more SBOM formats&lt;a class="td-heading-self-link" href="#it-reads-more-sbom-formats" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Previously onot accepted only SPDX documents. It can now also read &lt;a href="https://cyclonedx.org"&gt;CycloneDX&lt;/a&gt; (JSON, XML) and Excel. For SPDX it supports JSON, YAML, Tag-Value, and RDF. onot detects the input format from the file extension and content, so you do not need to specify the format yourself.&lt;/p&gt;</description></item><item><title>SK Telecom is the first Telecommunications Operator to adopt OpenChain ISO 5230</title><link>https://sktelecom.github.io/en/blog/2021/09/09/sk-telecom-is-the-first-telecommunications-operator-to-adopt-openchain-iso-5230/</link><pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate><guid>https://sktelecom.github.io/en/blog/2021/09/09/sk-telecom-is-the-first-telecommunications-operator-to-adopt-openchain-iso-5230/</guid><description>&lt;p&gt;SK Telecom, South Korea’s largest wireless carrier, is the first telecommunications operator to adopt OpenChain ISO 5230. This leap forward in governance builds on their long-term mission to lead in technological capabilities in 5G, AI, big data analysis, IoT and quantum cryptography communications as a global ICT leader.&lt;/p&gt;
 &lt;figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px"&gt;
-&lt;img class="card-img-top" src="https://sktelecom.github.io/en/blog/2021/09/09/sk-telecom-is-the-first-telecommunications-operator-to-adopt-openchain-iso-5230/featured_sktlogo_hu_3c86a01b9a941cd5.png" width="900" height="355"&gt;
+&lt;img class="card-img-top" src="https://sktelecom.github.io/en/blog/2021/09/09/sk-telecom-is-the-first-telecommunications-operator-to-adopt-openchain-iso-5230/featured_sktlogo_hu_ed7a9313d3b4b6f0.png" width="900" height="355"&gt;
 &lt;figcaption class="card-body px-0 pt-2 pb-0"&gt;
 &lt;p class="card-text"&gt;
 
@@ -11,7 +110,7 @@
 &lt;/figure&gt;
 
 &lt;p&gt;“SK Telecom is preparing for its transition to an AI company, and is strategically using open source to develop advanced technologies in AI, 5G, and cloud technology”, says Kim Yoon, CTO, SK Telecom. “Open source, essential for the early introduction of new technologies and rapid technological change, forms a key part of our strategy. We adopted OpenChain ISO 5230, the International Standard for open source compliance, to ensure effective process management in this space. We are also spreading our know-how around complying with open source international standards to SK affiliates and software supply chains to drive further expansion of open source ecosystems and to deliver even greater social value.”&lt;/p&gt;</description></item><item><title>SRT Alliance Welcomes SKT to the SRT Open Source Video Streaming Project</title><link>https://sktelecom.github.io/en/blog/2021/03/30/srt-alliance-welcomes-skt-to-the-srt-open-source-video-streaming-project/</link><pubDate>Tue, 30 Mar 2021 00:00:00 +0000</pubDate><guid>https://sktelecom.github.io/en/blog/2021/03/30/srt-alliance-welcomes-skt-to-the-srt-open-source-video-streaming-project/</guid><description>&lt;figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px"&gt;
-&lt;img class="card-img-top" src="https://sktelecom.github.io/en/blog/2021/03/30/srt-alliance-welcomes-skt-to-the-srt-open-source-video-streaming-project/featured-srtalliance_hu_1cc94ba4fdaa01ca.jpg" width="600" height="300"&gt;
+&lt;img class="card-img-top" src="https://sktelecom.github.io/en/blog/2021/03/30/srt-alliance-welcomes-skt-to-the-srt-open-source-video-streaming-project/featured-srtalliance_hu_4ae7c3bb17cea04f.jpg" width="600" height="300"&gt;
 &lt;figcaption class="card-body px-0 pt-2 pb-0"&gt;
 &lt;p class="card-text"&gt;
 
@@ -28,14 +127,14 @@ Image credit: SRT Alliance
 &lt;p&gt;The blog on the Open Source Portal at SK telecom website shares articles on open source.&lt;/p&gt;
 &lt;p&gt;Anyone can write.&lt;/p&gt;
 &lt;p&gt;Please refer to the guide on the next page. : &lt;a href="https://github.com/sktelecom/sktelecom.github.io/blob/master/docs/blog.md"&gt;How to write a blog&lt;/a&gt;&lt;/p&gt;
-
 &lt;/div&gt;</description></item><item><title>The sample blog post</title><link>https://sktelecom.github.io/en/blog/2020/08/29/the-sample-blog-post/</link><pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate><guid>https://sktelecom.github.io/en/blog/2020/08/29/the-sample-blog-post/</guid><description>&lt;p&gt;Text can be &lt;strong&gt;bold&lt;/strong&gt;, &lt;em&gt;italic&lt;/em&gt;, or &lt;del&gt;strikethrough&lt;/del&gt;. &lt;a href="https://github.com"&gt;Links&lt;/a&gt; should be blue with no underlines (unless hovered over).&lt;/p&gt;
 &lt;p&gt;There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&lt;/p&gt;
 &lt;p&gt;There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;There should be no margin above this first sentence.&lt;/p&gt;</description></item><item><title>소스 코드 내 저작권 표시 방법</title><link>https://sktelecom.github.io/en/blog/2020/08/12/%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EB%82%B4-%EC%A0%80%EC%9E%91%EA%B6%8C-%ED%91%9C%EC%8B%9C-%EB%B0%A9%EB%B2%95/</link><pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate><guid>https://sktelecom.github.io/en/blog/2020/08/12/%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EB%82%B4-%EC%A0%80%EC%9E%91%EA%B6%8C-%ED%91%9C%EC%8B%9C-%EB%B0%A9%EB%B2%95/</guid><description>&lt;h1 id="소스-코드-내-저작권-표시를-해야-하는-이유와-올바른-방법"&gt;소스 코드 내 저작권 표시를 해야 하는 이유와 올바른 방법&lt;a class="td-heading-self-link" href="#%ec%86%8c%ec%8a%a4-%ec%bd%94%eb%93%9c-%eb%82%b4-%ec%a0%80%ec%9e%91%ea%b6%8c-%ed%91%9c%ec%8b%9c%eb%a5%bc-%ed%95%b4%ec%95%bc-%ed%95%98%eb%8a%94-%ec%9d%b4%ec%9c%a0%ec%99%80-%ec%98%ac%eb%b0%94%eb%a5%b8-%eb%b0%a9%eb%b2%95" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;오픈소스 분야의 저명한 변호사인 Matija Šuklje는 최근 소스 코드 내 저작권 표시가 필요한 이유와 올바르게 작성하는 방법을 소개하였습니다. : &lt;a href="https://matija.suklje.name/how-and-why-to-properly-write-copyright-statements-in-your-code"&gt;https://matija.suklje.name/how-and-why-to-properly-write-copyright-statements-in-your-code&lt;/a&gt;​
-&lt;img src="https://sktelecom.github.io/en/blog/2020/08/12/%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EB%82%B4-%EC%A0%80%EC%9E%91%EA%B6%8C-%ED%91%9C%EC%8B%9C-%EB%B0%A9%EB%B2%95/featured_copyright.png" alt="copyright"&gt;&lt;/p&gt;
+&lt;img src="./featured_copyright.png" alt="copyright" width="640" height="299" loading="eager" fetchpriority="high" decoding="async"&gt;
+&lt;/p&gt;
 &lt;p&gt;여기서는 이 글의 주요 사항을 정리하였습니다.&lt;/p&gt;
 &lt;h1 id="tldr"&gt;TL;DR&lt;a class="td-heading-self-link" href="#tldr" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;아래 포맷의 저작권 및 라이선스 표시 당신이 작성한 모든 소스 코드 파일에 추가하세요.&lt;/p&gt;
